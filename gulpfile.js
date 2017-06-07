@@ -34,7 +34,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch("_src/scss/*.scss", ['sass']);
+    gulp.watch("_src/sass/*.scss", ['sass']);
     gulp.watch("_src/keyscreens/*.html", ['html']);
     gulp.watch("_src/js/*.js", ['js']);
     gulp.watch("_src/keyscreens/*.html").on('change', browserSync.reload);
