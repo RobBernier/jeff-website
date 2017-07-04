@@ -1,0 +1,27 @@
+//Main Content Mixins
+
+@mixin textWidth {
+  width: auto;
+  margin: 0 50px;
+  max-width: 1200px;
+
+  @media screen and (min-width: $break-large) {
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    margin: 0 30px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    margin: 0 10px;
+  }
+}
+
+@mixin fullWidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  max-width: 1900px;
+}
