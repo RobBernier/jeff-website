@@ -217,8 +217,8 @@ main {
 // Section dependent styling
 .gallery-section,
 .about-section,
-.contact-section {
-  display: flex;
+.contact-section,
+.story {
   margin: 150px 0 75px;
 
   h2 {
@@ -236,32 +236,133 @@ main {
       background: $color-yellow-light;
     }
   }
+}
 
-  .content1-of-4 {
-    flex: 0 0 25%;
-    width: 25%;
+// Story specific
+.story {
+  @include fullWidth;
+
+  > * {
+    @include textWidth;
   }
 
-  .content2-of-4 {
-    flex: 0 0 50%;
+  .section {
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+
+  &.story--line {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      float: right;
+      top: 115px;
+      right: calc(100% - 50px);
+      width: 0;
+      height: 5px;
+      background: $color-yellow-light;
+      transition: 0.3s ease;
+      transition-delay: 0.5s;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 115px;
+      left: 25px;
+      width: 5px;
+      height: 0;
+      background: $color-yellow-light;
+      transition: 1.5s ease;
+      transition-delay: 0.8s;
+    }
+
+    &.js-animate {
+      &:before {
+        width: 25px;
+      }
+
+      &:after {
+        height: calc(100%);
+      }
+    }
+  }
+}
+
+//Banner w/ Image
+.banner {
+  @include fullWidth;
+  position: relative;
+  height: 500px;
+
+  // Left and right varians
+  &.banner--right {
+    .banner__img-container {
+      right: -900px;
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+
+      &.js-animate {
+        right: 0;
+      }
+    }
+
+    .banner__text-area {
+      left: 0;
+      padding: 15px 70px 15px 50px;
+    }
+  }
+
+  &.banner--left {
+    .banner__img-container {
+      left: 0;
+      clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+    }
+
+    .banner__text-area {
+      right: 0;
+      padding: 15px 50px 15px 70px;
+    }
+  }
+
+  .banner__text-area {
+    position: absolute;
+    top: 0;
     width: 50%;
-  }
+    height: inherit;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s ease;
+    transition-delay: 0.5s;
 
-  .content3-of-4 {
-    flex: 0 0 75%;
-    width: 75%;
+    h1 {
+      position: relative;
+      text-shadow: 1px 1px $color-grey-light2;
 
-    &.right {
-      padding: 0 0 0 30px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50px;
+        bottom: -5px;
+        width: calc(100% - 100px);
+        height: 5px;
+        background: $color-yellow-light;
+      }
     }
 
-    &.left {
-      padding: 0 30px 0 0;
+    &.js-animate {
+      opacity: 1;
     }
   }
 
-  .content {
-    flex: 0 0 100%;
-    width: 100%;
+  .banner__img-container {
+    position: absolute;
+    top: 0;
+    background: url('./img/gallery/upstairs-bath/Bath10.jpg');
+    background-position: top center;
+    width: 900px;
+    height: inherit;
+    transition: 0.3s ease;
   }
 }

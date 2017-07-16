@@ -66,6 +66,16 @@
     }, {
       offset: '60%'
     });
+
+    // Banner Animation
+    $('.story').waypoint(function (direction) {
+      var element = this.element;
+      $(element).find('.banner__text-area,.banner__img-container').addClass('js-animate');
+      $(element).addClass('js-animate');
+    }, {
+      offset: '50%'
+    });
+    
   });
 
 })(jQuery);

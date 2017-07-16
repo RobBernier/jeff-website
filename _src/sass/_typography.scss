@@ -1,3 +1,13 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.5em;
+}
+
 // Headers
 h1,
 h2,
@@ -58,4 +68,13 @@ h4 {
 
 p {
   font-family: $font-open-sans;
+  font-size: 21px;
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    font-size: 16px;
+  }
 }
