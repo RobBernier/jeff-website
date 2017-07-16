@@ -2,22 +2,21 @@
   $(document).ready(function () {
 
     // Navigation Functionality
-    $('button.navigation-button').click(function () {
-      $('.main-navbar').toggleClass('expanded');
+    $('button.nav-button').click(function () {
+      $('.nav-content').toggleClass('expanded');
       $('body').toggleClass('fixed');
     });
 
     // If navigation item selected, close menu
-    $('.main-navbar > li > a').click(function () {
+    $('.nav-content > li > a').click(function () {
       var idString = $(this).attr('href').split('=')[0];
       var sectionLocation = $(idString).offset();
-      console.log(sectionLocation);
 
       $('html,body').animate({
         scrollTop: (sectionLocation.top - 60)
       }, 700);
 
-      $('.main-navbar').toggleClass('expanded');
+      $('.nav-content').toggleClass('expanded');
       $('body').toggleClass('fixed');
 
       return false;
@@ -29,17 +28,17 @@
     $(window).scroll(function () {
       var interval = setInterval(function () {
         if ($(window).scrollTop() > initialScroll) {
-          $('.main-navigation').addClass('nav-collapse');
+          $('.main-nav').addClass('js-collapse');
         }
         if ($(window).scrollTop() < initialScroll) {
-          $('.main-navigation').removeClass('nav-collapse');
+          $('.main-nav').removeClass('js-collapse');
         }
         initialScroll = $(window).scrollTop();
       }, 1000);
     });
 
     // Hero Text area Zoom
-    $('.hero-overlay .overlay-content').addClass('zoomed');
+    $('.hero__overlay .hero__overlay__content').addClass('zoomed');
 
     //Slick Slider for gallery section
     $('.image-slider').slick({
@@ -53,10 +52,8 @@
 
     // Three Image Module waypoint
     $('.three-image').waypoint(function (direction) {
-      console.log('triggered');
       var element = this.element;
       var elementContents = $(element).children();
-      console.log(elementContents);
       var i = 0;
       var interval = setInterval(function () {
         if (i < elementContents.length) {

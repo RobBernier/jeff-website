@@ -11,7 +11,7 @@ body {
 }
 
 // Navigation
-nav.main-navigation {
+nav.main-nav {
   position: fixed;
   left: 0;
   top: 0;
@@ -19,11 +19,11 @@ nav.main-navigation {
   z-index: 1;
   transition: top 0.3s ease;
 
-  &.nav-collapse {
+  &.js-collapse {
     top: -71px;
   }
 
-  .mobile-nav-menu {
+  .main-nav__navbar {
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -33,7 +33,7 @@ nav.main-navigation {
     background-color: $color-grey-light;
     border-bottom: 1px solid $color-grey-light2;
 
-    button.navigation-button {
+    button.nav-button {
       width: 60px;
       height: 60px;
       background: none;
@@ -45,7 +45,7 @@ nav.main-navigation {
     }
   }
 
-  .main-navbar {
+  .nav-content {
     position: fixed;
     right: -100%;
     width: 400px;
@@ -78,7 +78,7 @@ main {
     width: 100%;
   }
 
-  .hero-overlay {
+  .hero__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -89,7 +89,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    .overlay-content {
+    .hero__overlay__content {
       width: 600px;
       padding: 30px 0;
       transform: scale(0.98);
@@ -144,7 +144,7 @@ main {
         margin-bottom: 10px;
       }
 
-      .subheader {
+      .hero__overlay__content__subheader {
         text-align: center;
         color: #FFFFFF;
         font-size: 20px;

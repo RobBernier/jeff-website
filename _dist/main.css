@@ -743,16 +743,16 @@ body {
   body.fixed {
     overflow-y: hidden; }
 
-nav.main-navigation {
+nav.main-nav {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 1;
   transition: top 0.3s ease; }
-  nav.main-navigation.nav-collapse {
+  nav.main-nav.js-collapse {
     top: -71px; }
-  nav.main-navigation .mobile-nav-menu {
+  nav.main-nav .main-nav__navbar {
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -761,7 +761,7 @@ nav.main-navigation {
     height: 70px;
     background-color: #F6F6F6;
     border-bottom: 1px solid #ABABAB; }
-    nav.main-navigation .mobile-nav-menu button.navigation-button {
+    nav.main-nav .main-nav__navbar button.nav-button {
       width: 60px;
       height: 60px;
       background: none;
@@ -770,7 +770,7 @@ nav.main-navigation {
       background-size: 40px;
       background-position: center;
       background-repeat: no-repeat; }
-  nav.main-navigation .main-navbar {
+  nav.main-nav .nav-content {
     position: fixed;
     right: -100%;
     width: 400px;
@@ -780,9 +780,9 @@ nav.main-navigation {
     transition: right 0.3s ease;
     z-index: 1; }
     @media screen and (max-width: 1024px) {
-      nav.main-navigation .main-navbar {
+      nav.main-nav .nav-content {
         width: 100%; } }
-    nav.main-navigation .main-navbar.expanded {
+    nav.main-nav .nav-content.expanded {
       right: 0; }
 
 main {
@@ -807,7 +807,7 @@ main {
   max-width: 1900px; }
   .hero video {
     width: 100%; }
-  .hero .hero-overlay {
+  .hero .hero__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -817,12 +817,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center; }
-    .hero .hero-overlay .overlay-content {
+    .hero .hero__overlay .hero__overlay__content {
       width: 600px;
       padding: 30px 0;
       transform: scale(0.98);
       transition: transform 2s ease; }
-      .hero .hero-overlay .overlay-content:before {
+      .hero .hero__overlay .hero__overlay__content:before {
         content: '';
         display: block;
         position: absolute;
@@ -831,7 +831,7 @@ main {
         width: calc(100% - 200px);
         height: 2px;
         background: #FFA54F; }
-      .hero .hero-overlay .overlay-content:after {
+      .hero .hero__overlay .hero__overlay__content:after {
         content: '';
         display: block;
         position: absolute;
@@ -840,19 +840,19 @@ main {
         width: calc(100% - 200px);
         height: 2px;
         background: #FFA54F; }
-      .hero .hero-overlay .overlay-content.zoomed {
+      .hero .hero__overlay .hero__overlay__content.zoomed {
         transform: scale(1); }
       @media (max-width: 1024px) {
-        .hero .hero-overlay .overlay-content {
+        .hero .hero__overlay .hero__overlay__content {
           width: 450px;
           padding: 30px 0;
           margin: 0 50px; } }
       @media (max-width: 699px) {
-        .hero .hero-overlay .overlay-content {
+        .hero .hero__overlay .hero__overlay__content {
           width: auto;
           padding: 20px 0;
           margin: 0 30px; } }
-      .hero .hero-overlay .overlay-content h1 {
+      .hero .hero__overlay .hero__overlay__content h1 {
         text-align: center;
         color: #FFFFFF;
         font-family: "Inconsolata", monospace;
@@ -861,7 +861,7 @@ main {
         text-shadow: 1px 1px 1px #000000;
         margin-top: 0;
         margin-bottom: 10px; }
-      .hero .hero-overlay .overlay-content .subheader {
+      .hero .hero__overlay .hero__overlay__content .hero__overlay__content__subheader {
         text-align: center;
         color: #FFFFFF;
         font-size: 20px;
