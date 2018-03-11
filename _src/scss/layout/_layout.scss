@@ -1,4 +1,9 @@
-  .wysiwyg {
+// Main Content
+main {
+  @include textWidth;
+}
+
+.wysiwyg {
   display: flex;
 
   .content1-of-4 {

@@ -1,21 +1,31 @@
 {
   "name": "jeff-website",
   "version": "1.0.0",
-  "description": "Jeff Bernier Personal Website",
-  "main": "index.js",
+  "description": "Webite developed to showcase woodworking experience for potential clients",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbernier93/jeff-website.git"
+  },
+  "author": "Robert Bernier",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbernier93/jeff-website/issues"
+  },
+  "homepage": "https://github.com/rbernier93/jeff-website#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "jshint": "^2.9.4"
-  }
+    "gulp": "latest",
+    "browser-sync": "latest",
+    "gulp-sass": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-plumber": "latest",
+    "gulp-notify": "latest",
+    "gulp-concat": "latest",
+    "gulp-uglify": "latest",
+    "gulp-rename": "latest"
+    }
 }
