@@ -51,7 +51,7 @@
     });
 
     // Three Image Module waypoint
-    $('.three-image').waypoint(function (direction) {
+    $('.floated').waypoint(function (direction) {
       var element = this.element;
       var elementContents = $(element).children();
       var i = 0;

@@ -2,11 +2,18 @@
 @import "base/_mixins.scss";
 @import "base/_normalize.scss";
 @import "base/_typography.scss";
+@import "base/_base.scss";
+@import "base/_nav.scss";
 
 @import "vendor/_coverr.scss";
 @import "vendor/_slick.scss";
 @import "vendor/_lightbox.scss";
 
 @import "components/_style.scss";
+@import "components/_hero.scss";
+@import "components/_story.scss";
+@import "components/_quote.scss";
+@import "components/_threeimg.scss";
+@import "components/_banner.scss";
 
 @import "layout/_layout.scss";

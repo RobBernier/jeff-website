@@ -1,0 +1,50 @@
+.story {
+  @include fullWidth;
+
+  &__block {
+    @include gutter;
+  }
+
+  &--line {
+    position: relative;
+
+    &:before {
+      @media (min-width: $break-medium) {
+        content: '';
+        position: absolute;
+        float: right;
+        top: 115px;
+        right: calc(100% - 50px);
+        width: 0;
+        height: 5px;
+        background: $color-yellow;
+        transition: 0.3s ease;
+        transition-delay: 0.5s;
+      }
+    }
+
+    &:after {
+      @media (min-width: $break-medium) {
+        content: '';
+        position: absolute;
+        top: 115px;
+        left: 25px;
+        width: 5px;
+        height: 0;
+        background: $color-yellow;
+        transition: 1.5s ease;
+        transition-delay: 0.8s;
+      }
+    }
+
+    &.js-animate {
+      &:before {
+        width: 25px;
+      }
+
+      &:after {
+        height: calc(100%);
+      }
+    }
+  }
+}

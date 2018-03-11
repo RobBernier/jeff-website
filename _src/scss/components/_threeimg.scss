@@ -1,0 +1,22 @@
+//Three Image Module 
+.three-image {
+  @include fullWidth;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  &__item {
+    width: 100%;
+
+    @media (min-width: $break-large) {
+      position: relative;
+      right: -50px;
+      opacity: 0;
+      transition: 0.3s ease;
+
+      &.js-visible {
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

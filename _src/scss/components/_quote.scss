@@ -1,0 +1,26 @@
+.wysiwyg-blockquote {
+  @include fullWidth;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 45px 0;
+  background-color: $color-grey;
+
+  .quote {
+    @include gutter;
+  }
+}
+
+.quote {
+  margin: 0;
+  font-family: $font-roboto;
+  line-height: 1.45;
+  font-size: 22px;
+
+  &:before {
+    content: '“';
+  }
+
+  &:after {
+    content: '”';
+  }
+}

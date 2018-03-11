@@ -1,0 +1,54 @@
+// Navigation
+nav.main-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: top 0.3s ease;
+
+  &.js-collapse {
+    top: -71px;
+  }
+
+  .main-nav__navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    background-color: $color-grey;
+
+    button.nav-button {
+      width: 55px;
+      height: 55px;
+      background: none;
+      border: 0;
+      background-image: url('./icons/menu.svg');
+      background-size: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+
+  .nav-content {
+    position: fixed;
+    right: -100%;
+    width: 400px;
+    height: calc(100vh - 70px);
+    margin: 0;
+    background: $color-grey;
+    transition: right 0.3s ease;
+    z-index: 1;
+
+    @media screen and (max-width: $break-medium) {
+      width: 100%;
+    }
+
+    &.expanded {
+      right: 0;
+    }
+  }
+}

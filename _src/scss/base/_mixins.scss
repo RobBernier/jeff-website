@@ -1,20 +1,23 @@
 //Main Content Mixins
+@mixin gutter {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: $break-medium) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $break-large) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 
 @mixin textWidth {
-  width: auto;
-  margin: 0 50px;
-  max-width: 1200px;
-
-  @media screen and (min-width: $break-large) {
+  @media (min-width: $break-large) {
+    max-width: 1000px;
     margin: 0 auto;
-  }
-
-  @media screen and (max-width: $break-medium) {
-    margin: 0 30px;
-  }
-
-  @media screen and (max-width: $break-small) {
-    margin: 0 10px;
   }
 }
 
